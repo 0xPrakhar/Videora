@@ -1,0 +1,67 @@
+import { METHODS } from "node:http"
+
+easer? and DATA MOdeling??
+datamdoeling is most important
+git igorne generator ??
+why we put the dbname  in constant file and port in env file
+what is dotenv
+and why we ust that hing on our project
+
+    "dev": "nodemon  -r dotenv/config -e -json-modules Src/index.js"explalin this also and about the prettier and why use prettierrc
+
+
+    why we use the process.env.port
+
+
+    Aggreation queries ?? and pipeline
+
+    jwt is bearable token what it mean ?
+
+
+    cloudinay??
+
+
+
+    what are the http headers:
+    metadata keyvalue sent along with request &response 
+    caching authendication manage state 
+    brearer token ??
+    req headrs from client 
+    res headers from server
+    representation headers encoding compression 
+    payload headers data
+
+    most comman 
+    accept applicatioon json 
+    user-agent
+    athoritation 
+    content type 
+    cookie 
+    cache control 
+    cors 
+    acces control alow orgin 
+    acces contron allow credtinal
+    accss contol alow methions 
+    seciury
+    coe ploye
+    cors openr pooy 
+    contne seciuty poluicy 
+    x-xss protection
+
+     if([username ,email, fullname, password].some((field)=>{
+        return field?.trim() === ""
+    })){
+        throw new ApiError(400,"All fields are required");
+    }
+    
+
+    const existingUser=await User.findOne({
+        $or:[{username:username},{email:email}]
+      })
+
+
+
+
+explain the aggreation piplein and lookup and setfiled and arrayelementat METHODS
+
+
