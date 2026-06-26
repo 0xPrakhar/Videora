@@ -1,10 +1,29 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
+import { createBrowserRouter, RouterProvider,createRoutesFromElements, Route } from 'react-router-dom'
+import Layout from './component/layout/Layout'
+import HomePage from './pages/HomePage'
+import WatchPage from './pages/WatchPage'
+import SearchPage from './pages/SearchPage'
+import LoginPage from './pages/LoginPage'
+import ProfilePage from './pages/ProfilePage'
+
+const router =createBrowserRouter(
+  createRoutesFromElements(
+   <Route path="/" element={<Layout />}>
+      <Route index element={<HomePage />} />
+      <Route path="watch/:id" element={<WatchPage />} />
+      <Route path="search" element={<SearchPage />} />
+      <Route path="login" element={<LoginPage />} />
+      <Route path="profile" element={<ProfilePage />} />
+    </Route>
+  )
+  
+)
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </StrictMode>,
 )
