@@ -8,6 +8,7 @@ import WatchPage from './pages/WatchPage'
 import SearchPage from './pages/SearchPage'
 import LoginPage from './pages/LoginPage'
 import ProfilePage from './pages/ProfilePage'
+import SignupPage from './pages/SignupPage'
 
 const router =createBrowserRouter(
   createRoutesFromElements(
@@ -17,6 +18,7 @@ const router =createBrowserRouter(
       <Route path="search" element={<SearchPage />} />
       <Route path="login" element={<LoginPage />} />
       <Route path="profile" element={<ProfilePage />} />
+      <Route path="signup" element={<SignupPage />} />
     </Route>
   )
   

@@ -5,13 +5,14 @@ import React, { useId } from 'react'
 const Input = React.forwardRef(function Input(
 
   // Destructuring props
-  {
-    label,                  // Text shown above the input
-    type = 'text',          // Default input type
-    className = '',         // Extra classes passed from parent
-    placeholder,            // Placeholder text
-    ...props                // All other props (onChange, value, required, etc.)
-  },
+ {
+  label,
+  type = "text",
+  className = "",
+  placeholder,
+  rightElement,
+  ...props
+},
 
   // Ref coming from parent component
   ref
@@ -36,7 +37,7 @@ const Input = React.forwardRef(function Input(
         </label>
       )}
 
-      <input
+      {/* <input
         // Unique ID for accessibility
         id={id}
 
@@ -73,7 +74,41 @@ const Input = React.forwardRef(function Input(
           focus:ring-red-500/30
           ${className}
         `}
-      />
+      /> */
+      
+      <div className="relative">
+  <input
+    id={id}
+    type={type}
+    placeholder={placeholder}
+    ref={ref}
+    {...props}
+    className={`
+      w-full
+      px-4
+      py-3
+      pr-16
+      rounded-xl
+      bg-zinc-900
+      border border-zinc-700
+      text-white
+      placeholder:text-gray-500
+      outline-none
+      transition-all
+      duration-300
+      focus:border-red-500
+      focus:ring-2
+      focus:ring-red-500/30
+      ${className}
+    `}
+  />
+
+  {rightElement && (
+    <div className="absolute right-4 top-1/2 -translate-y-1/2">
+      {rightElement}
+    </div>
+  )}
+</div>}
     </div>
   )
 })

@@ -152,6 +152,26 @@ function Navbar() {
             P
           </div>
         </Link>
+        <NavLink
+            to="/signup"
+            className={({ isActive }) =>
+              isActive
+                ? "text-netflix-red font-semibold border-b-2 border-netflix-red pb-1"
+                : "text-gray-400 hover:text-white transition duration-300"
+            }
+          >
+           Signup
+          </NavLink>
+   <NavLink
+            to="/login"
+            className={({ isActive }) =>
+              isActive
+                ? "text-netflix-red font-semibold border-b-2 border-netflix-red pb-1"
+                : "text-gray-400 hover:text-white transition duration-300"
+            }
+          >
+           Login
+          </NavLink>
 
         {/* Mobile Menu Button */}
         <button
